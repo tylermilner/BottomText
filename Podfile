@@ -6,7 +6,6 @@ target 'BottomText' do
   use_frameworks!
 
   # Pods for BottomText
-  pod 'Apollo'
 
   target 'BottomTextTests' do
     inherit! :search_paths

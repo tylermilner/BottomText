@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Apollo
+//import Apollo
 
 class ViewController: UIViewController {
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 //        }
 //    }
     
-    let apollo = ApolloClient(url: URL(string: "https://api.graph.cool/simple/v1/ciyp5mu7q47df0132db4vojmp")!)
+//    let apollo = ApolloClient(url: URL(string: "https://api.graph.cool/simple/v1/ciyp5mu7q47df0132db4vojmp")!)
     
     override func viewDidLoad() {
         super.viewDidLoad()

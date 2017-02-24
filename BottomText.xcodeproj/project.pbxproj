@@ -17,7 +17,6 @@
 		A47CFECD1E56A15500B763EC /* BottomTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFECC1E56A15500B763EC /* BottomTextTests.swift */; };
 		A47CFED81E56A15600B763EC /* BottomTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFED71E56A15600B763EC /* BottomTextUITests.swift */; };
 		A47CFEE61E56A5B600B763EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */; };
-		A47CFEEB1E56B05800B763EC /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47CFEEA1E56B05800B763EC /* Apollo.framework */; };
 		DD2CE4A1227CD6CC51038A90 /* Pods_BottomTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6E30D16FAE509FA8EF2CF8 /* Pods_BottomTextTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		A47CFED71E56A15600B763EC /* BottomTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextUITests.swift; sourceTree = "<group>"; };
 		A47CFED91E56A15600B763EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		A47CFEEA1E56B05800B763EC /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Apollo.framework; sourceTree = "<group>"; };
 		AD6E30D16FAE509FA8EF2CF8 /* Pods_BottomTextTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomTextTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E058A9402C4F1D4D39D8A990 /* Pods-BottomText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottomText/Pods-BottomText.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECAB5CEC139B0D653C2A4D4 /* Pods_BottomText.framework in Frameworks */,
-				A47CFEEB1E56B05800B763EC /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +139,6 @@
 		A47CFEB61E56A15500B763EC /* BottomText */ = {
 			isa = PBXGroup;
 			children = (
-				A47CFEEA1E56B05800B763EC /* Apollo.framework */,
 				A47CFEB71E56A15500B763EC /* AppDelegate.swift */,
 				A47CFEB91E56A15500B763EC /* ViewController.swift */,
 				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
