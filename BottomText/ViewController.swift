@@ -8,6 +8,7 @@
 
 import UIKit
 import Apollo
+import Chester
 
 public final class AllPostsQuery: GraphQLQuery {
     
@@ -68,6 +69,8 @@ class ViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
+    // MARK: - Properties
+    
     var watcher: GraphQLQueryWatcher<AllPostsQuery>?
     
     var allPosts: [AllPostsQuery.Data.Post]? {
@@ -88,7 +91,18 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadData()
+//        loadData()
+        buildQueries()
+    }
+    
+    func buildQueries() {
+        let authorQuery = try! QueryBuilder().from("author").with(fields: "id", "name")
+        let allPostsQuery = try! QueryBuilder().from("allPosts").with(fields: "id", "body", "createdAt").with(subQuery: authorQuery)
+        
+        guard let queryString = try? allPostsQuery.build() else { fatalError("Failed to build query") }
+        
+        
+        
     }
 
     func loadData() {
