@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E33767DA05CC344F92C2DA8 /* Pods_BottomTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA632289F920BE1884CE7677 /* Pods_BottomTextTests.framework */; };
+		A446E96F1E5FDED300ABAF3F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A446E96E1E5FDED300ABAF3F /* API.swift */; };
 		A47CFEB81E56A15500B763EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFEB71E56A15500B763EC /* AppDelegate.swift */; };
 		A47CFEBA1E56A15500B763EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFEB91E56A15500B763EC /* ViewController.swift */; };
 		A47CFEBD1E56A15500B763EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47CFEBB1E56A15500B763EC /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		1ED6C8D7DCECE99E8CBEECEF /* Pods-BottomText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomText.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottomText/Pods-BottomText.release.xcconfig"; sourceTree = "<group>"; };
 		2BE36360A687C47FF15766D2 /* Pods_BottomText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3F96CAFC336C1C340451F2 /* Pods-BottomTextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomTextTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottomTextTests/Pods-BottomTextTests.release.xcconfig"; sourceTree = "<group>"; };
+		A446E96E1E5FDED300ABAF3F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A47CFEB41E56A15500B763EC /* BottomText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottomText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47CFEB71E56A15500B763EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47CFEB91E56A15500B763EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		A47CFEB61E56A15500B763EC /* BottomText */ = {
 			isa = PBXGroup;
 			children = (
+				A446E96E1E5FDED300ABAF3F /* API.swift */,
 				A47CFEB71E56A15500B763EC /* AppDelegate.swift */,
 				A47CFEB91E56A15500B763EC /* ViewController.swift */,
 				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
@@ -176,6 +179,7 @@
 			buildConfigurationList = A47CFEDC1E56A15600B763EC /* Build configuration list for PBXNativeTarget "BottomText" */;
 			buildPhases = (
 				4BF5179C9DBCF822F796F723 /* [CP] Check Pods Manifest.lock */,
+				A446E96B1E5FDDA100ABAF3F /* Generate Apollo GraphQL API */,
 				A47CFEB01E56A15500B763EC /* Sources */,
 				A47CFEB11E56A15500B763EC /* Frameworks */,
 				A47CFEB21E56A15500B763EC /* Resources */,
@@ -415,6 +419,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottomTextTests/Pods-BottomTextTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A446E96B1E5FDDA100ABAF3F /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
 		D92E5462365ACBF67927B6B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +472,7 @@
 			files = (
 				A47CFEBA1E56A15500B763EC /* ViewController.swift in Sources */,
 				A47CFEB81E56A15500B763EC /* AppDelegate.swift in Sources */,
+				A446E96F1E5FDED300ABAF3F /* API.swift in Sources */,
 				A47CFEE61E56A5B600B763EC /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
