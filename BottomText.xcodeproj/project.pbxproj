@@ -145,11 +145,11 @@
 				A47CFEEA1E56B05800B763EC /* Apollo.framework */,
 				A47CFEB71E56A15500B763EC /* AppDelegate.swift */,
 				A47CFEB91E56A15500B763EC /* ViewController.swift */,
+				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
 				A47CFEBB1E56A15500B763EC /* Main.storyboard */,
 				A47CFEBE1E56A15500B763EC /* Assets.xcassets */,
 				A47CFEC01E56A15500B763EC /* LaunchScreen.storyboard */,
 				A47CFEC31E56A15500B763EC /* Info.plist */,
-				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
 			);
 			path = BottomText;
 			sourceTree = "<group>";

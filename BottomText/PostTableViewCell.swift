@@ -24,7 +24,7 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with post: AllPostsQuery.Data.Post) {
-        textView.text = post.body
-    }
+//    func configure(with post: AllPostsQuery.Data.Post) {
+//        textView.text = post.body
+//    }
 }
