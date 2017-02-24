@@ -1,12 +1,15 @@
 PODS:
   - Apollo (0.5.6)
+  - Chester (0.4.1)
 
 DEPENDENCIES:
   - Apollo
+  - Chester
 
 SPEC CHECKSUMS:
   Apollo: 124ddbbca48acca75fd5f9ec5045454cb410bb31
+  Chester: 0c99901e5bed3ed867f7f095ea99740060bbefec
 
-PODFILE CHECKSUM: b0eaa61d4b9a8654e685175066601d40c2627d6e
+PODFILE CHECKSUM: 482af4f174eea41c20351e4be42f9442cd0559fd
 
 COCOAPODS: 1.2.0
