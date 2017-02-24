@@ -16,6 +16,8 @@
 		A47CFEC21E56A15500B763EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47CFEC01E56A15500B763EC /* LaunchScreen.storyboard */; };
 		A47CFECD1E56A15500B763EC /* BottomTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFECC1E56A15500B763EC /* BottomTextTests.swift */; };
 		A47CFED81E56A15600B763EC /* BottomTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFED71E56A15600B763EC /* BottomTextUITests.swift */; };
+		A47CFEE61E56A5B600B763EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */; };
+		A47CFEEB1E56B05800B763EC /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47CFEEA1E56B05800B763EC /* Apollo.framework */; };
 		DD2CE4A1227CD6CC51038A90 /* Pods_BottomTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6E30D16FAE509FA8EF2CF8 /* Pods_BottomTextTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		A47CFED31E56A15600B763EC /* BottomTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottomTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47CFED71E56A15600B763EC /* BottomTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextUITests.swift; sourceTree = "<group>"; };
 		A47CFED91E56A15600B763EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		A47CFEEA1E56B05800B763EC /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Apollo.framework; sourceTree = "<group>"; };
 		AD6E30D16FAE509FA8EF2CF8 /* Pods_BottomTextTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomTextTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E058A9402C4F1D4D39D8A990 /* Pods-BottomText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottomText/Pods-BottomText.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECAB5CEC139B0D653C2A4D4 /* Pods_BottomText.framework in Frameworks */,
+				A47CFEEB1E56B05800B763EC /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +142,14 @@
 		A47CFEB61E56A15500B763EC /* BottomText */ = {
 			isa = PBXGroup;
 			children = (
+				A47CFEEA1E56B05800B763EC /* Apollo.framework */,
 				A47CFEB71E56A15500B763EC /* AppDelegate.swift */,
 				A47CFEB91E56A15500B763EC /* ViewController.swift */,
 				A47CFEBB1E56A15500B763EC /* Main.storyboard */,
 				A47CFEBE1E56A15500B763EC /* Assets.xcassets */,
 				A47CFEC01E56A15500B763EC /* LaunchScreen.storyboard */,
 				A47CFEC31E56A15500B763EC /* Info.plist */,
+				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
 			);
 			path = BottomText;
 			sourceTree = "<group>";
@@ -451,6 +458,7 @@
 			files = (
 				A47CFEBA1E56A15500B763EC /* ViewController.swift in Sources */,
 				A47CFEB81E56A15500B763EC /* AppDelegate.swift in Sources */,
+				A47CFEE61E56A5B600B763EC /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +610,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3X9D9ZKDMN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BottomText",
+				);
 				INFOPLIST_FILE = BottomText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylermilner.BottomText;
@@ -616,6 +628,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3X9D9ZKDMN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BottomText",
+				);
 				INFOPLIST_FILE = BottomText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylermilner.BottomText;
@@ -705,6 +721,7 @@
 				A47CFEDE1E56A15600B763EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A47CFEDF1E56A15600B763EC /* Build configuration list for PBXNativeTarget "BottomTextTests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +730,7 @@
 				A47CFEE11E56A15600B763EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A47CFEE21E56A15600B763EC /* Build configuration list for PBXNativeTarget "BottomTextUITests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +739,7 @@
 				A47CFEE41E56A15600B763EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
