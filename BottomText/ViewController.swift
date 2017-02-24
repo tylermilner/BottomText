@@ -9,15 +9,6 @@
 import UIKit
 import Apollo
 
-//public protocol GraphQLOperation: class {
-//    static var operationDefinition: String { get }
-//    static var queryDocument: String { get }
-//    
-//    var variables: GraphQLMap? { get }
-//    
-//    associatedtype Data: GraphQLMappable
-//}
-
 public final class AllPostsQuery: GraphQLQuery {
     
     public static var operationDefinition =
@@ -31,8 +22,8 @@ public final class AllPostsQuery: GraphQLQuery {
             "        name" +
             "    }" +
             "  }" +
-    "}"
-//    public static let queryDocument = operationDefinition.appending(PostDetails.fragmentDefinition)
+        "}"
+    
     public static let queryDocument = operationDefinition
     
     public init() {
@@ -70,37 +61,6 @@ public final class AllPostsQuery: GraphQLQuery {
         }
     }
 }
-
-    
-//    public struct Data: GraphQLMappable {
-//        public let posts: [Post]
-//        
-//        public init(reader: GraphQLResultReader) throws {
-//            posts = try reader.list(for: Field(responseName: "posts"))
-//        }
-//        
-//        public struct Post: GraphQLMappable {
-//            public let __typename = "Post"
-//            
-//            public let fragments: Fragments
-//            
-//            public init(reader: GraphQLResultReader) throws {
-//                let postDetails = try PostDetails(reader: reader)
-//                fragments = Fragments(postDetails: postDetails)
-//            }
-//            
-//            public struct Fragments {
-//                public let postDetails: PostDetails
-//            }
-//        }
-//    }
-//}
-
-
-//public final class AllPostsQuery: GraphQLQuery {
-//
-//
-//}
 
 class ViewController: UIViewController {
     
