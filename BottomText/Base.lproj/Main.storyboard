@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BottomText" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CT4-xL-Lfa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostTableViewCell" id="sB5-ta-kGo" customClass="PostTableViewCell" customModule="BottomText" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sB5-ta-kGo" id="KRC-vr-hH1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vyw-t3-Wz8">
+                                                    <rect key="frame" x="96" y="8" width="271" height="83"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-Kc-Qu5">
+                                                    <rect key="frame" x="16" y="18" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="QWl-y0-uND"/>
+                                                        <constraint firstAttribute="height" constant="64" id="dwY-x9-hIB"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Vyw-t3-Wz8" secondAttribute="bottom" constant="8" id="1R1-Rx-j3m"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vyw-t3-Wz8" secondAttribute="trailing" constant="8" id="9de-4P-543"/>
+                                                <constraint firstItem="Vyw-t3-Wz8" firstAttribute="leading" secondItem="Q9r-Kc-Qu5" secondAttribute="trailing" constant="16" id="Vf5-qk-gfH"/>
+                                                <constraint firstItem="Q9r-Kc-Qu5" firstAttribute="leading" secondItem="KRC-vr-hH1" secondAttribute="leading" constant="16" id="t7h-4I-Xnt"/>
+                                                <constraint firstItem="Q9r-Kc-Qu5" firstAttribute="centerY" secondItem="KRC-vr-hH1" secondAttribute="centerY" id="xkz-Rg-F67"/>
+                                                <constraint firstItem="Vyw-t3-Wz8" firstAttribute="top" secondItem="KRC-vr-hH1" secondAttribute="top" constant="8" id="yje-wR-gZz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="Q9r-Kc-Qu5" id="OdF-mp-pEG"/>
+                                            <outlet property="textView" destination="Vyw-t3-Wz8" id="hUk-Qr-dDt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1OD-4s-SWc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CT4-xL-Lfa" secondAttribute="bottom" id="OR5-JH-Od2"/>
+                            <constraint firstAttribute="trailing" secondItem="CT4-xL-Lfa" secondAttribute="trailing" id="RMm-uK-mRx"/>
+                            <constraint firstItem="CT4-xL-Lfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mCO-g6-LIq"/>
+                            <constraint firstItem="CT4-xL-Lfa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pep-FJ-kjB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="CT4-xL-Lfa" id="oVm-Jp-oav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
