@@ -7,6 +7,7 @@ target 'BottomText' do
 
   # Pods for BottomText
   pod 'Apollo'
+  pod 'Chester'
 
   target 'BottomTextTests' do
     inherit! :search_paths
