@@ -15,15 +15,19 @@ class ViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
-//    var watcher: GraphQLQueryWatcher<AllPostsQuery>?
-//    
-//    var allPosts: [AllPostsQuery.Data.Post]? {
-//        didSet {
-//            tableView.reloadData()
-//        }
-//    }
+    // MARK: - Properties
     
-//    let apollo = ApolloClient(url: URL(string: "https://api.graph.cool/simple/v1/ciyp5mu7q47df0132db4vojmp")!)
+    var watcher: GraphQLQueryWatcher<AllPostsQuery>?
+
+    var allPosts: [AllPostsQuery.Data.AllPost]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    let apollo = ApolloClient(url: URL(string: "https://api.graph.cool/simple/v1/ciyp5mu7q47df0132db4vojmp")!)
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,28 +41,28 @@ class ViewController: UIViewController {
         
         loadData()
     }
+    
+    // MARK: - Private
 
-    func loadData() {
-//        watcher = apollo.watch(query: AllPostsQuery()) { (result, error) in
-//            if let error = error {
-//                NSLog("Error while fetching query: \(error.localizedDescription)")
-//                return
-//            }
-//            
-//            DispatchQueue.main.async {
-//                self.allPosts = result?.data?.allPosts
-//                print("allPosts: \(self.allPosts)")
-//            }
-//            
-//        }
+    private func loadData() {
+        watcher = apollo.watch(query: AllPostsQuery()) { (result, error) in
+            if let error = error {
+                NSLog("Error while fetching query: \(error.localizedDescription)")
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.allPosts = result?.data?.allPosts
+                print("allPosts: \(self.allPosts)")
+            }
+        }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return allPosts?.count ?? 0
-        return 0
+        return allPosts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,14 +70,12 @@ extension ViewController: UITableViewDataSource {
             fatalError("Could not dequeue PostTableViewCell")
         }
         
-//        guard let post = allPosts?[indexPath.row] else {
-//            fatalError("Could not find post at row \(indexPath.row)")
-//        }
-//        
-//        cell.configure(with: post)
+        guard let post = allPosts?[indexPath.row] else {
+            fatalError("Could not find post at row \(indexPath.row)")
+        }
+        
+        cell.configure(with: post)
         
         return cell
-
     }
 }
-

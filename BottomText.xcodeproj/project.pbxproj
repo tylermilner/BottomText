@@ -17,6 +17,7 @@
 		A47CFECD1E56A15500B763EC /* BottomTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFECC1E56A15500B763EC /* BottomTextTests.swift */; };
 		A47CFED81E56A15600B763EC /* BottomTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFED71E56A15600B763EC /* BottomTextUITests.swift */; };
 		A47CFEE61E56A5B600B763EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */; };
+		A4BE9DE11E7B61230049E3D3 /* AllPosts.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A4BE9DE01E7B61230049E3D3 /* AllPosts.graphql */; };
 		CD9942B7A20843A82F9FE59C /* Pods_BottomTextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045BEDEF9FE927F68A770D7F /* Pods_BottomTextUITests.framework */; };
 		DE6E07B2186D4CDE1094E681 /* Pods_BottomText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE36360A687C47FF15766D2 /* Pods_BottomText.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		A47CFED71E56A15600B763EC /* BottomTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextUITests.swift; sourceTree = "<group>"; };
 		A47CFED91E56A15600B763EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		A4BE9DE01E7B61230049E3D3 /* AllPosts.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllPosts.graphql; sourceTree = "<group>"; };
 		CA9673BEDCEBC59003049DFA /* Pods-BottomTextUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomTextUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottomTextUITests/Pods-BottomTextUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA632289F920BE1884CE7677 /* Pods_BottomTextTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomTextTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC28058218FFEC2408339E0A /* Pods-BottomText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottomText/Pods-BottomText.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 		A47CFEB61E56A15500B763EC /* BottomText */ = {
 			isa = PBXGroup;
 			children = (
-				A446E96E1E5FDED300ABAF3F /* API.swift */,
+				A4BE9DDD1E7B607B0049E3D3 /* GraphQL */,
 				A47CFEB71E56A15500B763EC /* AppDelegate.swift */,
 				A47CFEB91E56A15500B763EC /* ViewController.swift */,
 				A47CFEE51E56A5B600B763EC /* PostTableViewCell.swift */,
@@ -169,6 +171,15 @@
 				A47CFED91E56A15600B763EC /* Info.plist */,
 			);
 			path = BottomTextUITests;
+			sourceTree = "<group>";
+		};
+		A4BE9DDD1E7B607B0049E3D3 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				A4BE9DE01E7B61230049E3D3 /* AllPosts.graphql */,
+				A446E96E1E5FDED300ABAF3F /* API.swift */,
+			);
+			name = GraphQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 				A47CFEC21E56A15500B763EC /* LaunchScreen.storyboard in Resources */,
 				A47CFEBF1E56A15500B763EC /* Assets.xcassets in Resources */,
 				A47CFEBD1E56A15500B763EC /* Main.storyboard in Resources */,
+				A4BE9DE11E7B61230049E3D3 /* AllPosts.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

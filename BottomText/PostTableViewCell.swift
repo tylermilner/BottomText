@@ -10,21 +10,14 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet var avatarImageView: UIImageView!
     @IBOutlet var textView: UITextView!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
-//    func configure(with post: AllPostsQuery.Data.Post) {
-//        textView.text = post.body
-//    }
+    // MARK: - Public
+    
+    func configure(with post: AllPostsQuery.Data.AllPost) {
+        textView.text = post.body
+    }
 }

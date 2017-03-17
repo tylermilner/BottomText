@@ -1,0 +1,13 @@
+query AllPosts {
+    allPosts {
+        id
+        body
+        createdAt
+        author {
+        	id
+        	name
+        }
+    }
+}
+
+
